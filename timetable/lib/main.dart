@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:timetable/Screens/Welcome/welcome_screen.dart';
 import 'package:timetable/constants.dart';
-import 'package:timetable/constants.dart';
+
 
 
 void main() {
