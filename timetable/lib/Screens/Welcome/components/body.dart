@@ -15,28 +15,36 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              "Welcome to ActiveLife",
-              style: TextStyle(fontWeight: FontWeight.bold),
+              "",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 20,
+              ),
             ),
             SizedBox(
               height: size.height * 0.05,
             ),
             SvgPicture.asset(
-              "assets/icons/chat.svg",
+              "assets/icons/calendar.svg",
               height: size.height * 0.45,
             ),
             SizedBox(
-              height: size.height * 0.05,
+              height: size.height * 0.1,
             ),
             RoundedButton(
-              text: "LOGIN",
+              text: "LOG IN",
               press: () {},
             ),
-            RoundedButton(
-              text: "SIGN UP",
-              color: kPrimaryLightColor,
-              textColor: Colors.black,
-              press: () {},
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            const Text(
+              "New to ActiveLife? Sign up",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+              )
             ),
           ],
         ),
