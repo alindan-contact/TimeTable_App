@@ -17,14 +17,18 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
       children: <Widget>[
         Text(
           login ? "Don't have any account ? " : "Already have an Account?",
-          style: TextStyle(color: kPrimaryColor),
+          style: TextStyle(
+              color: Colors.white
+          ),
         ),
         GestureDetector(
           onTap: press,
           child: Text(
-            login ? "Sing Up" : "Sign In",
+            login ? "Sign Up" : "Sign In",
             style: TextStyle(
-                color: kPrimaryColor, fontWeight: FontWeight.bold),
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+            ),
           ),
         ),
       ],

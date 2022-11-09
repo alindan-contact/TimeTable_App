@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:timetable/Screens/Login/components/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:timetable/components/rounded_button.dart';
-import 'package:timetable/constants.dart';
-import 'package:timetable/components/text_field_container.dart';
 import '../../../components/already_have_an_account_check.dart';
 import '../../../components/rounded_input_file.dart';
 import '../../../components/rounded_password_field.dart';
+import 'package:timetable/Screens/Signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -20,9 +19,10 @@ class Body extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
+          const Text(
             "LOGIN",
-            style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 32),
           ),
           SizedBox(height: size.height * 0.03),
           SvgPicture.asset(
@@ -40,7 +40,18 @@ class Body extends StatelessWidget {
           SizedBox(height: size.height * 0.03),
           RoundedButton(text: "LOGIN", press: () {}),
           SizedBox(height: size.height * 0.03),
-          AlreadyHaveAnAccountCheck(press: () {}),
+          AlreadyHaveAnAccountCheck(
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignUpScreen();
+                  },
+                ),
+              );
+            },
+          ),
         ],
       ),
     );

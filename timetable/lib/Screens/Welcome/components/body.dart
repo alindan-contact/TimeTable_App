@@ -3,7 +3,6 @@ import 'package:timetable/Screens/Login/login_screen.dart';
 import 'package:timetable/Screens/Welcome/components/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:timetable/components/rounded_button.dart';
-import 'package:timetable/constants.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -50,11 +49,19 @@ class Body extends StatelessWidget {
               height: size.height * 0.02,
             ),
             const Text(
-              "New to ActiveLife? Sign up",
+              "New to ActiveLife?",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 14,
-              )
+              ),
+            ),
+            const Text(
+              "Sign up",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 11,
+              ),
             ),
           ],
         ),
