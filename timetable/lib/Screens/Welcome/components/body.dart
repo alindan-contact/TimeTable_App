@@ -4,6 +4,9 @@ import 'package:timetable/Screens/Welcome/components/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:timetable/components/rounded_button.dart';
 
+import '../../../components/already_have_an_account_check.dart';
+import '../../Signup/signup_screen.dart';
+
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -48,20 +51,18 @@ class Body extends StatelessWidget {
             SizedBox(
               height: size.height * 0.02,
             ),
-            const Text(
-              "New to ActiveLife?",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-              ),
-            ),
-            const Text(
-              "Sign up",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-                fontSize: 11,
-              ),
+            AlreadyHaveAnAccountCheck(
+              login: true,
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),
